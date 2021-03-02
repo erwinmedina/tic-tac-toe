@@ -66,7 +66,7 @@ function handleClick(event) {
 
 // FUNCTIONS //
 function initialize() {
-    winBoard = [];
+    winBoard = []; 
     board = [0,0,0,0,0,0,0,0,0];
     turn = 1; // Player1 = 1, Player2 = -1
     winner = null; // represents win, tie, or in progress
