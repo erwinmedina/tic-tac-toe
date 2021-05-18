@@ -1,0 +1,69 @@
+/* body {
+  background-color: gray;
+}
+main {
+  justify-content: center;
+  text-align: center;
+}
+
+button {
+  position: absolute;
+  top: 100px;
+  left: 150px;
+}
+header h1 {
+  text-align: center;
+  margin: 20px;
+}
+
+span {
+  opacity: 0;
+}
+
+.rows {
+  margin: 0 auto;
+  padding: 0;
+  width: 650px;
+}
+
+.rows div {
+  padding: 85px 0;
+  border: solid black;
+  display: inline-block;
+  margin: 5px;
+  height: 200px;
+  width: 200px;
+  transition: 0.5s;
+}
+
+.row1 div {
+  border-top: none;
+}
+.row1 div:first-child {
+  border-left: none;
+}
+.row1 div:last-child {
+  border-right: none;
+}
+
+.row2 div:first-child {
+  border-left: none;
+}
+.row2 div:last-child {
+  border-right: none;
+}
+
+.row3 div {
+  border-bottom: none;
+}
+.row3 div:first-child {
+  border-left: none;
+}
+.row3 div:last-child {
+  border-right: none;
+}
+
+.rows div:hover {
+  color: white;
+  background-color: rgba(0, 0, 255, 0.7);
+} */

@@ -30,7 +30,6 @@ let winningCombos = [
 
 // CACHED ELEMENT REFERENCES //
 const boxes = [...document.querySelectorAll('.rows > div')];
-console.log(boxes);
 const pointX = document.getElementById('pointX');
 const pointO = document.getElementById('pointO');
 const message = document.getElementById('message');
@@ -42,12 +41,7 @@ initialize();
 for (var i = 0; i < boxes.length; i++) {
     boxes[i].addEventListener('click', handleClick);
 }
-playAgain.addEventListener("click", function(){
-    boxes.forEach(function(box) {
-        box.style.background = null;
-    });
-    initialize();
-});
+playAgain.addEventListener("click", initialize);
 resetButton.addEventListener("click", reset);
 
 // HANDLES THE CLICK EVENTS //
@@ -67,10 +61,11 @@ function handleClick(event) {
 
 // FUNCTIONS //
 function initialize() {
-    winBoard = []; 
+    winBoard = [];
     board = [0,0,0,0,0,0,0,0,0];
     turn = 1; // Player1 = 1, Player2 = -1
     winner = null; // represents win, tie, or in progress
+    colorWinner();
     render();
 }
 
@@ -129,18 +124,17 @@ function reset() {
     for (value in points) {
         points[value] = 0;
     }
-    boxes.forEach(function(box) {
-        console.log(box);
-        box.style.background = null;
-    });
-
     initialize();
 }
 
 function colorWinner() {
+    for (cells in boxes) {
+        boxes[cells].style.backgroundColor = 'transparent';
+    }
+
     for (i in winBoard) {
         if (winner) {
-            boxes[winBoard[i]].style.background = '#008000';
+            boxes[winBoard[i]].style.backgroundColor = '#008000';
         }
     }
 }
